@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StyleNest - Shop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s ease-in-out;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .product-listing {
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .product-listing h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .product-card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      max-width: 250px;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+    .product-card p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0.5rem 0 1rem;
+    }
+    .btn {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background-color: #34345c;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e1e2f;
+      color: white;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">StyleNest</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-listing">
+    <h2>All Products</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="img/tshirt.jpg" alt="T-Shirt">
+        <h3>Stylish T-Shirt</h3>
+        <p>₹499</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div class="product-card">
+        <img src="img/sneakers.jpg" alt="Sneakers">
+        <h3>Comfy Sneakers</h3>
+        <p>₹999</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div class="product-card">
+        <img src="img/lamp.jpg" alt="Lamp">
+        <h3>Decor Lamp</h3>
+        <p>₹799</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 StyleNest. All rights reserved.</p>
+  </footer>
+
+  <script>
+    console.log("Shop page loaded.");
+  </script>
+</body>
+</html>
