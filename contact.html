@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - StyleNest</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s ease-in-out;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    main.contact {
+      padding: 4rem 2rem;
+      max-width: 700px;
+      margin: auto;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    .contact h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .contact p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-form label {
+      font-weight: bold;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+    }
+    .btn {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #34345c;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e1e2f;
+      color: white;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">StyleNest</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <h1>Contact Us</h1>
+    <p>If you have any questions, suggestions, or just want to say hello, we'd love to hear from you!</p>
+    <form action="#" method="post" class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 StyleNest. All rights reserved.</p>
+  </footer>
+
+  <script>
+    console.log("Contact page loaded.");
+  </script>
+</body>
+</html>
