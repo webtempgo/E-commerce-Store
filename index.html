@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StyleNest - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: width 0.3s ease-in-out;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: #1e1e2f;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
+    }
+    .btn {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      background-color: #34345c;
+    }
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 3rem 2rem;
+      background-color: #fff;
+      animation: slideUp 1.2s ease-in-out;
+    }
+    .feature {
+      font-size: 1.1rem;
+      font-weight: bold;
+      background-color: #eaeaea;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      margin: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .feature:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e1e2f;
+      color: white;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">StyleNest</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to StyleNest</h1>
+    <p>Trendy Lifestyle Products at Your Fingertips</p>
+    <a href="shop.html" class="btn">Shop Now</a>
+  </section>
+
+  <section class="features">
+    <div class="feature">Free Shipping</div>
+    <div class="feature">Easy Returns</div>
+    <div class="feature">Secure Payments</div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 StyleNest. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("Homepage loaded with animation.");
+    });
+  </script>
+</body>
+</html>
